@@ -19,7 +19,7 @@ img {
 }
 
 .white {
-    background-color: rgb(255,255,255);
+    background-color: rgb(255, 255, 255);
 }
 
 .main {
@@ -31,7 +31,7 @@ img {
     height: 50px;
     border: 0;
     padding: 10px;
-    background-color: rgba(235,236,237,0.3);
+    background-color: rgba(235, 236, 237, 0.3);
     margin-bottom: 20px;
 }
 
@@ -54,8 +54,8 @@ input:focus {
     padding-right: 10px;
     color: rgba(55, 53, 47, 0.6);
     margin-bottom: 20px;
-  }
-  
+}
+
 
 .converte:hover {
     background: rgba(55, 53, 27, 0.08);

@@ -1,20 +1,29 @@
 <!DOCTYPE html>
 <html lang="ko">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <script src="https://code.jquery.com/jquery-latest.min.js"></script>
+    <link rel="shortcut icon" href="favicon.ico">
     <title>노션툴즈 이미지링크</title>
 </head>
+
 <body>
     <div class="main">
-        <input type="text" placeholder="이곳에 이미지 링크를 입력해주세요" class="input_box" id="img_link">        
+        <input type="text" placeholder="이곳에 이미지 링크를 입력해주세요" class="input_box" id="img_link">
         <input type="text" placeholder="이곳에 이동할 링크(하이퍼링크)를 입력해주세요" class="input_box" id="hyper_link">
         <input type="text" placeholder='다크모드를 적용하고 싶다면 이곳에 "다크모드"라고 적어주세요' class="input_box" id="theme">
-        <div class="converte" onclick="golink()" id="go_link" style="user-select: none; transition: background 20ms ease-in 0s; cursor: pointer; display: inline-flex; align-items: center; flex-shrink: 1; white-space: nowrap; height: 32px; border-radius: 3px; font-size: inherit; line-height: 1.2; min-width: 0px; padding-left: 6px; padding-right: 8px; width: 100%;"><svg viewBox="0 0 18 18" class="plus" style="width: 14px; height: 14px; display: block; fill: rgba(202, 204, 206, 0.6); flex-shrink: 0; backface-visibility: hidden; margin-right: 6px;"><polygon points="17,8 10,8 10,1 8,1 8,8 1,8 1,10 8,10 8,17 10,17 10,10 17,10 "></polygon></svg>이미지링크 복사하기</div>
-        <input type="text" id="output" placeholder='"이미지링크 복사하기" 버튼을 눌러주세요' class="input_box" readonly>        
+        <div class="converte" onclick="golink()" id="go_link"
+            style="user-select: none; transition: background 20ms ease-in 0s; cursor: pointer; display: inline-flex; align-items: center; flex-shrink: 1; white-space: nowrap; height: 32px; border-radius: 3px; font-size: inherit; line-height: 1.2; min-width: 0px; padding-left: 6px; padding-right: 8px; width: 100%;">
+            <svg viewBox="0 0 18 18" class="plus"
+                style="width: 14px; height: 14px; display: block; fill: rgba(202, 204, 206, 0.6); flex-shrink: 0; backface-visibility: hidden; margin-right: 6px;">
+                <polygon points="17,8 10,8 10,1 8,1 8,8 1,8 1,10 8,10 8,17 10,17 10,10 17,10 "></polygon>
+            </svg>이미지링크 복사하기</div>
+        <input type="text" id="output" placeholder='"이미지링크 복사하기" 버튼을 눌러주세요' class="input_box" readonly>
     </div>
     <script src="script.js"></script>
 </body>
+
 </html>
