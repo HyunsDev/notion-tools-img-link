@@ -1,27 +1,25 @@
-function getParameterByName(name) {
-    name = name.replace(/[\[]/, "\\[").replace(/[\]]/, "\\]");
-    var regex = new RegExp("[\\?&]" + name + "=([^&#]*)"),
-        results = regex.exec(location.search);
-    return results === null ? "" : decodeURIComponent(results[1].replace(/\+/g, " "));
-}
-var img = getParameterByName("img");
-var link = getParameterByName("link");
-var theme = getParameterByName("theme");
-img = atob(img)
-link = atob(link)
+function copylink() {
+    var copyText = document.getElementById("output");
+    copyText.select();
+    copyText.setSelectionRange(0, 99999); /*For mobile devices*/
+    document.execCommand("copy");
+    }
 
-console.log(theme)
+function golink() {
+    var imglink = btoa($("#img_link").val());
+    var hyperlink = btoa($("#hyper_link").val());
+    var theme = $("#theme").val()
 
-if (theme != "black") {
-    $("body").addClass("white");
-    console.log("배경 하양")
-} else {
-    $("body").addClass("black");
-    console.log("배경 검정")
+    if (theme == "다크모드") {
+        theme = "black";
+    } else {
+        theme = "white";
+    }
+
+    var output = `https://hyunsdev.github.io/notion-tools-img-link/block/?theme=${theme}&img=${imglink}&link=${hyperlink}`
+
+    $("#output").val(output)
+    copylink()
+    alert("링크가 복사되었습니다.")
 }
-if (img == "" || link == "") {
-    console.log("틀림")
-} else {
-    $("#link").attr("href", link);
-    $("#img").attr("src", img);
-}
+    
