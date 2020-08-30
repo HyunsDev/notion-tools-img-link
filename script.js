@@ -13,8 +13,14 @@ function golink() {
   } else {
     theme = "white";
   }
-  var output = `https://hyunsdev.github.io/notion-tools-img-link/block/?theme=${theme}&img=${imglink}&link=${hyperlink}`;
-  $("#output").val(output);
-  copylink();
-  alert("링크가 복사되었습니다.");
+
+  if(imglink != "" && hyperlink != "") {
+    var output = `https://hyunsdev.github.io/notion-tools-img-link/block/?theme=${theme}&img=${imglink}&link=${hyperlink}`;
+    $("#output").val(output);
+    copylink();
+    alert("링크가 복사되었습니다.");
+  } else {
+    $("#output").val("올바른 값을 입력하고 다시 버튼을 눌러주세요.");
+  }
+  
 }
