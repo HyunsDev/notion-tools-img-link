@@ -13,7 +13,6 @@ function golink() {
   } else {
     theme = "white";
   }
-
   if(imglink != "" && hyperlink != "") {
     var output = `https://hyunsdev.github.io/notion-tools-img-link/block/?theme=${theme}&img=${imglink}&link=${hyperlink}`;
     $("#output").val(output);
@@ -22,5 +21,4 @@ function golink() {
   } else {
     $("#output").val("올바른 값을 입력하고 다시 버튼을 눌러주세요.");
   }
-  
 }
